@@ -3,7 +3,6 @@ package com.magiadigital.metrics;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.magiadigital.structs.CohParagraph;
 import com.magiadigital.structs.CohText;
@@ -39,36 +38,36 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 
 	@Override
 	public void analyze( HashMap<Word,Integer> toFill, CohText text ){
-		double dAns = 0.0;
-		dAns = nounIncidence( text ) ;
-		toFill.put( NOUN_INCIDENCE , dAns ) ;
-		
-		dAns = verbIncidence( text ) ;
-		toFill.put( VERB_INCIDENCE , dAns ) ;
-		
-		dAns = adjectiveIncidence( text ) ;
-		toFill.put( ADJECTIVE_INCIDENCE , dAns ) ;
-		
-		dAns = adverbIncidence( text ) ;
-		toFill.put( ADVERB_INCIDENCE , dAns ) ;
-		
-		dAns = pronounIncidence( text ) ;
-		toFill.put( PRONOUN_INCIDENCE , dAns ) ;
-		
-		dAns = firstPersonSingularPronounIncidence( text ) ;
-		toFill.put( FIRST_PERSON_SINGULAR_PRONOUN_INCIDENCE , dAns ) ;
-		
-		dAns = firstPersonPluralPronounIncidence( text ) ;
-		toFill.put( FIRST_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
-		
-		dAns = secondPersonPronounIncidence( text ) ;
-		toFill.put( SECOND_PERSON_PRONOUN_INCIDENCE , dAns ) ;
-		
-		dAns = thirdPersonSingularPronounIncidence( text ) ;
-		toFill.put( THIRD_PERSON_SINGULAR_PRONOUN_INCIDENCE , dAns ) ;
-		
-		dAns = thirdPersonPluralPronounIncidence( text ) ;
-		toFill.put( THRID_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
+//		double dAns = 0.0;
+//		dAns = nounIncidence( text ) ;
+//		toFill.put( NOUN_INCIDENCE , dAns ) ;
+//		
+//		dAns = verbIncidence( text ) ;
+//		toFill.put( VERB_INCIDENCE , dAns ) ;
+//		
+//		dAns = adjectiveIncidence( text ) ;
+//		toFill.put( ADJECTIVE_INCIDENCE , dAns ) ;
+//		
+//		dAns = adverbIncidence( text ) ;
+//		toFill.put( ADVERB_INCIDENCE , dAns ) ;
+//		
+//		dAns = pronounIncidence( text ) ;
+//		toFill.put( PRONOUN_INCIDENCE , dAns ) ;
+//		
+//		dAns = firstPersonSingularPronounIncidence( text ) ;
+//		toFill.put( FIRST_PERSON_SINGULAR_PRONOUN_INCIDENCE , dAns ) ;
+//		
+//		dAns = firstPersonPluralPronounIncidence( text ) ;
+//		toFill.put( FIRST_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
+//		
+//		dAns = secondPersonPronounIncidence( text ) ;
+//		toFill.put( SECOND_PERSON_PRONOUN_INCIDENCE , dAns ) ;
+//		
+//		dAns = thirdPersonSingularPronounIncidence( text ) ;
+//		toFill.put( THIRD_PERSON_SINGULAR_PRONOUN_INCIDENCE , dAns ) ;
+//		
+//		dAns = thirdPersonPluralPronounIncidence( text ) ;
+//		toFill.put( THRID_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
 	}
 	
 	public void setOfWords( List<String> setOfWords ){

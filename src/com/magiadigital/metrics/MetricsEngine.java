@@ -1,23 +1,17 @@
 package com.magiadigital.metrics ;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.magiadigital.structs.CohText;
 import com.magiadigital.utils.IFreelingAnalyzer;
 import com.magiadigital.utils.ImplFreelingAnalyzer;
 import com.magiadigital.utils.Utils;
-import com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm.WordListener;
 
 import edu.upc.freeling.Word ;
 
@@ -47,15 +41,16 @@ public class MetricsEngine {
 			while( sc.hasNextLine() ){
 				String line = sc.nextLine() ;
 				HashMap<Word,Integer> ctWords = analyze( line ) ;
-				for( Word w : ctWords ){
+				Set<Word> keys = ctWords.keySet() ;
+				for( Word w : keys ){
 					String lem = w.getLemma() ;
 					if( !mapWords.containsKey( lem ) ){
 						mapWords.put( lem , true ) ;
 						allWords.add( lem ) ;
 					}
 				}
-				lstDialogs.add( lstWords ) ;
-				Utils.debug( sc.nextLine() ) ;
+				lstDialogs.add( ctWords ) ;
+				Utils.debug( line ) ;
 			}
 			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
@@ -74,34 +69,34 @@ public class MetricsEngine {
 	}
 	
 	public void process( String in , String out ){
-		File folder = new File( in ) ;
-		String ansDir = out ;
-		File [] files = folder.listFiles() ;
-		int ans = 0 ;
-		for( File f : files ){
-			if( f.isFile() ){
-				if( f.getName().startsWith( "Texto" ) && f.getName().endsWith( "txt" ) ){
-					System.out.println( f.getName() ) ;
-					ans++ ;
-					File ansFile = new File( ansDir + "Metrics_" + f.getName() ) ;
-					try{
-						if( ansFile.exists() ){}
-						else ansFile.createNewFile() ;
-						String text = new String( Files.readAllBytes( Paths.get( f.getPath() ) ) ) ;
-						Map<String,Double> acum = analyze( text ) ;
-						FileWriter fw = new FileWriter( ansFile ) ;
-						BufferedWriter bfw = new BufferedWriter( fw ) ;
-						for( Entry<String,Double> entry : acum.entrySet() ){
-							bfw.write( entry.getKey() +  " " + entry.getValue()  + "\n" ) ;
-						}
-						bfw.close() ;
-						fw.close() ;
-					}catch( Exception e ){
-						e.printStackTrace() ;
-					}
-				}
-			}
-		}
-		System.out.println( ans ) ;
+//		File folder = new File( in ) ;
+//		String ansDir = out ;
+//		File [] files = folder.listFiles() ;
+//		int ans = 0 ;
+//		for( File f : files ){
+//			if( f.isFile() ){
+//				if( f.getName().startsWith( "Texto" ) && f.getName().endsWith( "txt" ) ){
+//					System.out.println( f.getName() ) ;
+//					ans++ ;
+//					File ansFile = new File( ansDir + "Metrics_" + f.getName() ) ;
+//					try{
+//						if( ansFile.exists() ){}
+//						else ansFile.createNewFile() ;
+//						String text = new String( Files.readAllBytes( Paths.get( f.getPath() ) ) ) ;
+//						Map<String,Double> acum = analyze( text ) ;
+//						FileWriter fw = new FileWriter( ansFile ) ;
+//						BufferedWriter bfw = new BufferedWriter( fw ) ;
+//						for( Entry<String,Double> entry : acum.entrySet() ){
+//							bfw.write( entry.getKey() +  " " + entry.getValue()  + "\n" ) ;
+//						}
+//						bfw.close() ;
+//						fw.close() ;
+//					}catch( Exception e ){
+//						e.printStackTrace() ;
+//					}
+//				}
+//			}
+//		}
+//		System.out.println( ans ) ;
 	}
 }
