@@ -19,7 +19,7 @@ public class MetricsEngine {
 	private static MetricsEngine instance = new MetricsEngine() ;
 	
 	private HashMap<String,Boolean> mapWords ;
-	private List<String> allWords ;
+	private List<Word> allWords ;
 	private IFreelingAnalyzer freeling = ImplFreelingAnalyzer.getInstance() ;
 	private BagOfWordsAnalyzer bow = BagOfWordsAnalyzer.getInstance() ;
 	
@@ -38,6 +38,7 @@ public class MetricsEngine {
 		// Process all dialogs
 		while( ddSc.hasNextLine() ){
 			Scanner sc = new Scanner( new File( ddSc.nextLine() ) ) ;
+			Utils.debug( "/* ======== INI DIALOGO ======= */" ) ;
 			while( sc.hasNextLine() ){
 				String line = sc.nextLine() ;
 				HashMap<Word,Integer> ctWords = analyze( line ) ;
@@ -46,7 +47,7 @@ public class MetricsEngine {
 					String lem = w.getLemma() ;
 					if( !mapWords.containsKey( lem ) ){
 						mapWords.put( lem , true ) ;
-						allWords.add( lem ) ;
+						allWords.add( w ) ;
 					}
 				}
 				lstDialogs.add( ctWords ) ;

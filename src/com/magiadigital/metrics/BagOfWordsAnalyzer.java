@@ -7,6 +7,7 @@ import java.util.List;
 import com.magiadigital.structs.CohParagraph;
 import com.magiadigital.structs.CohText;
 import com.magiadigital.structs.FreelingWordIterable;
+import com.magiadigital.utils.Utils;
 
 import edu.upc.freeling.Sentence;
 import edu.upc.freeling.Word;
@@ -70,12 +71,17 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 //		toFill.put( THRID_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
 	}
 	
-	public void setOfWords( List<String> setOfWords ){
+	public void setOfWords( List<Word> setOfWords ){
+		for(int i = 0 ; i < setOfWords.size() ; i++) Utils.debug( setOfWords.get( i ).getLemma() ) ;
 		this.allWords = setOfWords ;
 	}
 	
 	public List<Integer> build( HashMap<Word,Integer> dialog ){
 		List<Integer> desc = new ArrayList<Integer>( allWords.size() ) ;
+		for(int i = 0 ; i < allWords.size() ; i++){
+			Word w = allWords.get( i ) ;
+			if( dialog.containsKey( w ) ) desc.set( i , dialog.get( w ) ) ; 
+		}
 		return desc ;
 	}
 	
