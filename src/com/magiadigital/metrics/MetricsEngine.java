@@ -19,8 +19,8 @@ import com.magiadigital.utils.Utils;
 public class MetricsEngine {
 	private static MetricsEngine instance = new MetricsEngine() ;
 	
-//	private IFreelingAnalyzer freeling = ImplFreelingAnalyzer.getInstance() ;
-//	private BagOfWordsAnalyzer bow = BagOfWordsAnalyzer.getInstance() ;
+	private IFreelingAnalyzer freeling = ImplFreelingAnalyzer.getInstance() ;
+	private BagOfWordsAnalyzer bow = BagOfWordsAnalyzer.getInstance() ;
 	
 	private MetricsEngine(){
 	}
@@ -34,9 +34,11 @@ public class MetricsEngine {
 		while( ddSc.hasNextLine() ){
 			Scanner sc = new Scanner( new File( ddSc.nextLine() ) ) ;
 			String local = sc.nextLine() ;
+			Utils.debug( local ) ;
 			while( sc.hasNextLine() ){
 				Utils.debug( sc.nextLine() ) ;
 			}
+			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
 	}
 	
