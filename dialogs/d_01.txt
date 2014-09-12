@@ -1,18 +1,17 @@
-Minimarket Estelita
-U1: Hola. Una consulta, quiero ver mi saldo y ver para... Gracias
-U1: Ah, perfecto. Y... ¿puedo retirar por acá también?
-A1: Sí. ¿Cuánto?
-U1: 50 soles. ¿Necesitas que te dé esto otra vez?
-U1: ¿También se pueden pagar recibos con la cuenta esto de acá?
-A1: Con su tarjeta
-U1: Ah ya. Pero no a través de acá. Sino directo con la tarjeta.
-A1: No. Con su tarjeta y en efectivo.
-U1: Ah Ya
-U1: Listo. Gracias.
-A1: Gracias.
-U1: Para... ¿para hacer un depó... que alguien me haga un depósito a mi necesito que me dé... solo da... necesito darle el número de cuenta?
-A1: Número de cuenta
-U1: Y con el número de cuenta aquí...
-A1: Sí [interrupción]
-U1: ... te lo depositan. Gracias.
-A1: Gracias
+Hola. Una consulta, quiero ver mi saldo y ver para... Gracias
+Ah, perfecto. Y... ¿puedo retirar por acá también?
+Sí. ¿Cuánto?
+50 soles. ¿Necesitas que te dé esto otra vez?
+¿También se pueden pagar recibos con la cuenta esto de acá?
+Con su tarjeta
+Ah ya. Pero no a través de acá. Sino directo con la tarjeta.
+No. Con su tarjeta y en efectivo.
+Ah Ya
+Listo. Gracias.
+Gracias.
+Para... ¿para hacer un depó... que alguien me haga un depósito a mi necesito que me dé... solo da... necesito darle el número de cuenta?
+Número de cuenta
+Y con el número de cuenta aquí...
+Sí [interrupción]
+... te lo depositan. Gracias.
+Gracias

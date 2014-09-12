@@ -1,13 +1,12 @@
-R&B Market
-A4: Adelante
-U6: Este ¿para pagar este un... teléfono?
-A4: ¿Es Claro o Movistar?
-U6: Ay no sé
-A4: Es que me tiene que especificar 
-U6: No sé qué será [ininteligible]
-A4: Tengo que entrar...
-U6: Sanjinéz es su nombre [Ininteligible]
-A4: No, no. Eso.. no tiene nada que ver. Tengo que entrar por códigos de empresa. Si usted me dice que es Claro entro a Claro...
-U6: Ah ya
-A4: ... entonces voy viendo
-U6: Ya. Vuelvo, ¿ya?
+Adelante
+Este ¿para pagar este un... teléfono?
+¿Es Claro o Movistar?
+Ay no sé
+Es que me tiene que especificar 
+No sé qué será [ininteligible]
+Tengo que entrar...
+Sanjinéz es su nombre [Ininteligible]
+No, no. Eso.. no tiene nada que ver. Tengo que entrar por códigos de empresa. Si usted me dice que es Claro entro a Claro...
+Ah ya
+... entonces voy viendo
+Ya. Vuelvo, ¿ya?

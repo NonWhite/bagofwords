@@ -1,11 +1,14 @@
 package com.magiadigital.metrics;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.magiadigital.structs.CohParagraph;
 import com.magiadigital.structs.CohText;
 import com.magiadigital.structs.FreelingWordIterable;
+
 import edu.upc.freeling.Sentence;
 import edu.upc.freeling.Word;
 
@@ -24,8 +27,10 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	static double INCIDENCE = 1000. ;
 	
 	static BagOfWordsAnalyzer instance;
+
+	private List<String> allWords ;
 	
-	public static BagOfWordsAnalyzer getInstance() {
+	public static BagOfWordsAnalyzer getInstance(){
 		if( instance == null ) return instance = new BagOfWordsAnalyzer() ;
 		return instance ;
 	}
@@ -33,7 +38,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	private BagOfWordsAnalyzer() {}
 
 	@Override
-	public void analyze(Map<String, Double> toFill, CohText text) {
+	public void analyze( HashMap<Word,Integer> toFill, CohText text ){
 		double dAns = 0.0;
 		dAns = nounIncidence( text ) ;
 		toFill.put( NOUN_INCIDENCE , dAns ) ;
@@ -64,6 +69,15 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 		
 		dAns = thirdPersonPluralPronounIncidence( text ) ;
 		toFill.put( THRID_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
+	}
+	
+	public void setOfWords( List<String> setOfWords ){
+		this.allWords = setOfWords ;
+	}
+	
+	public List<Integer> build( HashMap<Word,Integer> dialog ){
+		List<Integer> desc = new ArrayList<Integer>( allWords.size() ) ;
+		return desc ;
 	}
 	
 	public double nounIncidence( CohText text ){

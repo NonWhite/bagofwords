@@ -1,9 +1,8 @@
-Lalo´s Market
-U2: Primero quiero ver cuánto... cuánto tengo de saldo
-U2: Me confundí. ¿Qué  aprieto?
-A5: Amarillo
-U2: Amarillo
-U2: Ya. ¿Para hacer un retiro?
-A5: ¿Cuánto?
-U2: 480
-A5: Su DNI también
+Primero quiero ver cuánto... cuánto tengo de saldo
+Me confundí. ¿Qué  aprieto?
+Amarillo
+Amarillo
+Ya. ¿Para hacer un retiro?
+¿Cuánto?
+480
+Su DNI también

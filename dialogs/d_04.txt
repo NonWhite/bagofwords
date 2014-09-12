@@ -1,18 +1,17 @@
-R&B Market
-U3: Amiga, no hay ningún pago entonces, ¿no?
-A3: Se ha colgado el sistema, disculpe
-U4: Señorita, ¿no hay ninguna… para hacer ningún pago? ¿No?
-U1: ¿Para para depositar tampoco?
-A4: No
-U1: Ah
-A3: Se ha colgado ahorita el sistema
-U1: Ah. Y se re...
-U2: ¿Y demora? [interrupción] ¿Demora para regresar?
-A3: No señor, no sabemos. Eso es cuestión de…
-A4: Un tiempo. [interrupción] A veces puede ser en 10 minutos como también en una hora
-U2: [Ininteligible]
-A3: [Ininteligible]
-U2: ¿Y... y... y eso es en general señora? ¿O...
-U1: O sea... [interrupción]
-U1: ... o hay otro agente donde pueda que estén haciendo?
-A3: Normalmente eso es en general cuando este tipo de problemas hay, ah
+Amiga, no hay ningún pago entonces, ¿no?
+Se ha colgado el sistema, disculpe
+Señorita, ¿no hay ninguna… para hacer ningún pago? ¿No?
+¿Para para depositar tampoco?
+No
+Ah
+Se ha colgado ahorita el sistema
+Ah. Y se re...
+¿Y demora? [interrupción] ¿Demora para regresar?
+No señor, no sabemos. Eso es cuestión de…
+Un tiempo. [interrupción] A veces puede ser en 10 minutos como también en una hora
+[Ininteligible]
+[Ininteligible]
+¿Y... y... y eso es en general señora? ¿O...
+O sea... [interrupción]
+... o hay otro agente donde pueda que estén haciendo?
+Normalmente eso es en general cuando este tipo de problemas hay, ah

@@ -6,7 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
@@ -15,10 +17,15 @@ import com.magiadigital.structs.CohText;
 import com.magiadigital.utils.IFreelingAnalyzer;
 import com.magiadigital.utils.ImplFreelingAnalyzer;
 import com.magiadigital.utils.Utils;
+import com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm.WordListener;
+
+import edu.upc.freeling.Word ;
 
 public class MetricsEngine {
 	private static MetricsEngine instance = new MetricsEngine() ;
 	
+	private HashMap<String,Boolean> mapWords ;
+	private List<String> allWords ;
 	private IFreelingAnalyzer freeling = ImplFreelingAnalyzer.getInstance() ;
 	private BagOfWordsAnalyzer bow = BagOfWordsAnalyzer.getInstance() ;
 	
@@ -30,20 +37,36 @@ public class MetricsEngine {
 	}
 	
 	public void processDialogs( String path ) throws FileNotFoundException{
+		mapWords = new HashMap<>() ;
+		allWords = new ArrayList<>() ;
 		Scanner ddSc = new Scanner( new File( path ) ) ;
+		List<HashMap<Word,Integer>> lstDialogs = new ArrayList<>() ;
+		// Process all dialogs
 		while( ddSc.hasNextLine() ){
 			Scanner sc = new Scanner( new File( ddSc.nextLine() ) ) ;
-			String local = sc.nextLine() ;
-			Utils.debug( local ) ;
 			while( sc.hasNextLine() ){
+				String line = sc.nextLine() ;
+				HashMap<Word,Integer> ctWords = analyze( line ) ;
+				for( Word w : ctWords ){
+					String lem = w.getLemma() ;
+					if( !mapWords.containsKey( lem ) ){
+						mapWords.put( lem , true ) ;
+						allWords.add( lem ) ;
+					}
+				}
+				lstDialogs.add( lstWords ) ;
 				Utils.debug( sc.nextLine() ) ;
 			}
 			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
+		// Build bag of words
+		List<List<Integer>> bagOfWords = new ArrayList<>() ;
+		bow.setOfWords( allWords ) ;
+		for( HashMap<Word,Integer> dialog : lstDialogs ) bagOfWords.add( bow.build( dialog ) ) ;
 	}
 	
-	public Map<String,Double> analyze( String text ){
-		Map<String,Double> ans = new HashMap<>() ;
+	public HashMap<Word,Integer> analyze( String text ){
+		HashMap<Word,Integer> ans = new HashMap<>() ;
 		CohText ctxt = new CohText( text ) ;
 		ctxt.analyze( freeling ) ;
 		bow.analyze( ans ,  ctxt ) ;

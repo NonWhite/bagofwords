@@ -1,42 +1,41 @@
-Bodega Darien
-U1: Hola. ¿Acá puedo ver lo del agente?
-A6: ¿Qué quieres ver?
-U1: Depósit... No. Sacar y mi estado de cuenta. Espérate.
-A6: ¿Cuál es primero? ¿Sacar o el estado de cuenta?
-U1: No primero sacar. Primero sacar.
-A6: ¿Cuánto?
-U1: 50
-A6: A ver su clave
-U1: Ya. ¿Cuál es el límite para sacar?
-A6: ¿Límite?
-U1: Sí
-A6: ¿Quiere más de 300?
-U1: No, no, no. Te digo. Quiero saber cuánto es lo que... límite para poder sacar
-A6: Lo que quieras
-U1: Ah, ¿lo que quieras? No, no hay...
-A7: 10 mil, 20 mil, 50 mil, 100 mil
-U1: O sea puede ser mil soles y si tienes mil soles me das. Puede ser mil soles en el mismo cajero y si tienes mil soles me das.
-A6: Si es que lo tengo te doy
-U1: Ah, pensé que había un límite por cajero
-A6: Eso depende de la caja de nosotros que tengamos
-U1: Ah ok
-A7: En las tardes a veces... cuando hacen pagos ahí pago. Si no hay plata no.
-U1: Para el estado de cuenta ¿te la vuelvo a pasar?
-A6: [Ininteligible]
-U1: Me llegaste a dar los 50 soles
-A6: Sí
-U1: Ta que dónde los metí
-A6: [Ininiteligible] Ahí está tu voucher [ininteligible]
-U1: No, sí, sí me diste el voucher pero dónde metí la plata
-U1: Creo que me has dado el voucher pero no los 50 soles, ah
-A6: ¿Ah?
-U1: Creo que me has dado el voucher pero no los 50 soles
-A6: ¿Cómo te voy a dar el voucher sin los 50 soles?
-U1: ¿No puedes darme el voucher sin los 50 soles? El voucher sale por un lado y la plata por otra
-A6: Tengo los 2 juntos por eso te digo
-U1: ¿Cómo los 2 juntos?
-A6: [Ininteligible]
-U1: Fíjate. Porque no me has dado los 50 soles. Si no los tuviera aquí. Y sólo tengo un billete de 100. Nnn... no me lo has dado.
-A6: Revise bien. Porque no te voy a pagar con [ininteligible]
-U1: No. No tengo acá, no tengo acá, no tengo acá, no tengo acá y no tengo acá. No tengo otro sitio. No tengo otro sitio donde pueda estar. Fíjate tú si te sobra o si no te sobra 50 soles. Porque no me has dado
-U1: Gracias
+Hola. ¿Acá puedo ver lo del agente?
+¿Qué quieres ver?
+Depósit... No. Sacar y mi estado de cuenta. Espérate.
+¿Cuál es primero? ¿Sacar o el estado de cuenta?
+No primero sacar. Primero sacar.
+¿Cuánto?
+50
+A ver su clave
+Ya. ¿Cuál es el límite para sacar?
+¿Límite?
+Sí
+¿Quiere más de 300?
+No, no, no. Te digo. Quiero saber cuánto es lo que... límite para poder sacar
+Lo que quieras
+Ah, ¿lo que quieras? No, no hay...
+10 mil, 20 mil, 50 mil, 100 mil
+O sea puede ser mil soles y si tienes mil soles me das. Puede ser mil soles en el mismo cajero y si tienes mil soles me das.
+Si es que lo tengo te doy
+Ah, pensé que había un límite por cajero
+Eso depende de la caja de nosotros que tengamos
+Ah ok
+En las tardes a veces... cuando hacen pagos ahí pago. Si no hay plata no.
+Para el estado de cuenta ¿te la vuelvo a pasar?
+[Ininteligible]
+Me llegaste a dar los 50 soles
+Sí
+Ta que dónde los metí
+[Ininiteligible] Ahí está tu voucher [ininteligible]
+No, sí, sí me diste el voucher pero dónde metí la plata
+Creo que me has dado el voucher pero no los 50 soles, ah
+¿Ah?
+Creo que me has dado el voucher pero no los 50 soles
+¿Cómo te voy a dar el voucher sin los 50 soles?
+¿No puedes darme el voucher sin los 50 soles? El voucher sale por un lado y la plata por otra
+Tengo los 2 juntos por eso te digo
+¿Cómo los 2 juntos?
+[Ininteligible]
+Fíjate. Porque no me has dado los 50 soles. Si no los tuviera aquí. Y sólo tengo un billete de 100. Nnn... no me lo has dado.
+Revise bien. Porque no te voy a pagar con [ininteligible]
+No. No tengo acá, no tengo acá, no tengo acá, no tengo acá y no tengo acá. No tengo otro sitio. No tengo otro sitio donde pueda estar. Fíjate tú si te sobra o si no te sobra 50 soles. Porque no me has dado
+Gracias
