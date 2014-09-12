@@ -1,0 +1,21 @@
+Botica Sandoval
+U2: Una pregunta. ¿Para hacer este... retiros eh... tengo que ser el titular de la cuenta?
+A2: Pero tienes la clave y el DNI
+U2: Eh... eh... ¿tengo el número del DNI o el DNI físico?
+A2: El número de DNI
+U2: Sí. ¿Hasta cuánto puedo retirar?
+A2: 500 el máximo
+U2: Mmm... ya. ¿Cómo?
+A2: ¿500 me dice?
+U2: Sí
+A2: [Ininteligible]
+U2: Sí
+A2: Ah ya. ¿Su clave?
+A2: El botón de la derecha
+XX: Buenos días
+U2: Su DNI. Buenos días.
+A2: ¿Lo escribo también?
+U2: Su DNI. Sí. Digítalo.
+A2: Cien, doscientos, trescientos, cuatrocientos, quinientos
+U2: Ok. Gracias
+A2: Gracias

@@ -1,0 +1,29 @@
+R&B Market
+A4: ¿Alguien va a hacer un retiro?
+U1: Sí. Yo voy a hacer un retiro. ¿Usted también va a hacer un retiro?
+U5: No, voy a pagar
+A4: ¿Usted va a hacer un retiro?
+U1: Sí
+A3: A ver, dice que intente con la otra operación pero para pagos, así, después de una hora
+U1: Ah, a ver
+A4: ¿Cuánto va a retirar?
+U1: 50
+A3: Yo he llamado y me dice que no reportan...
+U1: Que, a veces se cuelga para algunas cosas nada más
+A4: Sobre todo para pagos
+U1: Ah
+A3: Antes de ayer fue depósitos, ... [ininteligible]
+U1: Ah, que, para depósitos se colgaba, no podías
+A3: Antes de ayer.
+U1: Ah
+A3: Pero todos los días pasa un problema. Si no es una cosa es otra.
+U1: No te creo. Que, a veces falla en una cosa a veces falla en la otra
+A3: Pero todos los días el banco... [ininteligible]... se caen
+U1: ¿Sí? No te creo. Hazme un favor. ¿Me puedes dar un estado de cuenta? ¿De movimientos? ¿La paso de nuevo o la tienes...? Ya. Y cuando es el de ayer por ejemplo de retiros, nadie puede retirar nada.
+A3: Ajá
+A4: Es en general, ah
+U1: Ah, en todos
+A4: En general
+U1: Ah
+A4: Es en general. Si se va el sistema de Claro es en general. No hay Claro para todos, no solamente para acá.
+U1: "Oy" perfecto, mil gracias.

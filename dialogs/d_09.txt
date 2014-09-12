@@ -1,0 +1,13 @@
+R&B Market
+U7: Saldo quiero... para ver... por favor
+A4: ¿Su clave?
+U7: Estamos en 8, ¿no?
+U7: Clave
+U7: Ya. Retiro. 250
+A4: 250
+A4: Ingrese su clave
+U7: Clave
+U7: DNI
+A4: DNI
+U7: Ok. Ok, ok
+U7: Que milagro. No hay gente ahora. No hay cobrador ni vendedor. Gracias. Gracias.

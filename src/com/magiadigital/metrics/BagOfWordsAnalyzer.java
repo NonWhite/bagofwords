@@ -9,7 +9,7 @@ import com.magiadigital.structs.FreelingWordIterable;
 import edu.upc.freeling.Sentence;
 import edu.upc.freeling.Word;
 
-public class WordInformationAnalyzer implements ICohAnalyzer{
+public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	static String NOUN_INCIDENCE = "WRDNOUN" ;
 	static String VERB_INCIDENCE = "WRDVERB" ;
 	static String ADJECTIVE_INCIDENCE = "WRDADJ" ;
@@ -23,14 +23,14 @@ public class WordInformationAnalyzer implements ICohAnalyzer{
 
 	static double INCIDENCE = 1000. ;
 	
-	static WordInformationAnalyzer instance;
+	static BagOfWordsAnalyzer instance;
 	
-	public static WordInformationAnalyzer getInstance() {
-		if (instance == null) return instance = new WordInformationAnalyzer();
-		return instance;
+	public static BagOfWordsAnalyzer getInstance() {
+		if( instance == null ) return instance = new BagOfWordsAnalyzer() ;
+		return instance ;
 	}
 	
-	private WordInformationAnalyzer() {}
+	private BagOfWordsAnalyzer() {}
 
 	@Override
 	public void analyze(Map<String, Double> toFill, CohText text) {

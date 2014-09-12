@@ -1,0 +1,20 @@
+R&B Market
+U2: Buenas, ¿puedo hacer yo un retiro de la cuenta de un tercero?
+A4: [Ininteligible]
+U2: Sí, de mi papá
+A4: Pero si tiene su DNI y su clave
+U2: Su DNI... el documento o el número
+A4: El número
+U2: Ah, tengo el número
+A4: ¿Cuánto?
+U2: Eh, 500. Es el máximo, ¿no? [ininteligible]
+A4: En sí el máximo es 2500 pero por partes
+U2: Ah
+A4: Su clave
+A4: DNI
+U2: Eh... ¿Puedo ver cuánto me queda?... ¿Mi saldo?
+A4: Pase la tarjeta de nuevo
+U2: ¿Así creo?
+A4: ¿Su clave?
+U2: Ok
+A4: Gracias

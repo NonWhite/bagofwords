@@ -1,0 +1,22 @@
+Lalo´s Market
+U1: Buenas. Sí. Para hacer un depósito. Eh... no. El número... Le doy el número de cuenta
+A5: ¿Ahorro?
+U1: Sí. Ahorro. Es 19125980899030.
+A5: ¿Manuel Miranda?
+U1: Sí. Y si también me puede dar un estado de cuenta.
+A5: [ininteligible]
+U1: Sí. No te preocupes
+U1: Y un estado de cuenta por favor
+A5: ¿De los movimientos o consulta?
+U1: Ah... de los movimientos. ¿Son dos diferentes?
+A5: Sí
+U1: Ah, ¿y cuál es el otro?
+A5: Saldo y movimientos
+U1: Ah no. El de movimientos
+U1: ¿Cuál es el límite que se puede retirar con la tarjeta?
+A5: 500
+U1: 500
+A5: O lo que tengas
+U1: (Risas) 500 o lo que tengas. Listo. Muchas gracias
+A5: Buenas tardes
+U1: Hasta luego
