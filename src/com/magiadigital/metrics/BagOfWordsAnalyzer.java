@@ -28,7 +28,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	
 	static BagOfWordsAnalyzer instance;
 
-	private List<String> allWords ;
+	private List<Word> allWords ;
 	
 	public static BagOfWordsAnalyzer getInstance(){
 		if( instance == null ) return instance = new BagOfWordsAnalyzer() ;
@@ -39,47 +39,29 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 
 	@Override
 	public void analyze( HashMap<Word,Integer> toFill, CohText text ){
-//		double dAns = 0.0;
-//		dAns = nounIncidence( text ) ;
-//		toFill.put( NOUN_INCIDENCE , dAns ) ;
-//		
-//		dAns = verbIncidence( text ) ;
-//		toFill.put( VERB_INCIDENCE , dAns ) ;
-//		
-//		dAns = adjectiveIncidence( text ) ;
-//		toFill.put( ADJECTIVE_INCIDENCE , dAns ) ;
-//		
-//		dAns = adverbIncidence( text ) ;
-//		toFill.put( ADVERB_INCIDENCE , dAns ) ;
-//		
-//		dAns = pronounIncidence( text ) ;
-//		toFill.put( PRONOUN_INCIDENCE , dAns ) ;
-//		
-//		dAns = firstPersonSingularPronounIncidence( text ) ;
-//		toFill.put( FIRST_PERSON_SINGULAR_PRONOUN_INCIDENCE , dAns ) ;
-//		
-//		dAns = firstPersonPluralPronounIncidence( text ) ;
-//		toFill.put( FIRST_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
-//		
-//		dAns = secondPersonPronounIncidence( text ) ;
-//		toFill.put( SECOND_PERSON_PRONOUN_INCIDENCE , dAns ) ;
-//		
-//		dAns = thirdPersonSingularPronounIncidence( text ) ;
-//		toFill.put( THIRD_PERSON_SINGULAR_PRONOUN_INCIDENCE , dAns ) ;
-//		
-//		dAns = thirdPersonPluralPronounIncidence( text ) ;
-//		toFill.put( THRID_PERSON_PLURAL_PRONOUN_INCIDENCE , dAns ) ;
+		List<CohParagraph> paragraphs = text.getParagraphs() ;
+		for( CohParagraph p : paragraphs ){
+			for( Sentence s : p ){
+				FreelingWordIterable sIt = new FreelingWordIterable( s ) ;
+				for( Word w : sIt ){
+					Integer cont = 0 ;
+					if( toFill.containsKey( w ) ) cont = toFill.get( w ) ;
+					toFill.put( w , cont + 1 ) ;
+				}
+			}
+		}
 	}
 	
 	public void setOfWords( List<Word> setOfWords ){
-		for(int i = 0 ; i < setOfWords.size() ; i++) Utils.debug( setOfWords.get( i ).getLemma() ) ;
+		for(int i = 0 ; i < setOfWords.size() ; i++) Utils.debug( i + ": " + setOfWords.get( i ).getLemma() ) ;
 		this.allWords = setOfWords ;
 	}
 	
 	public List<Integer> build( HashMap<Word,Integer> dialog ){
-		List<Integer> desc = new ArrayList<Integer>( allWords.size() ) ;
+		List<Integer> desc = new ArrayList<Integer>() ;
 		for(int i = 0 ; i < allWords.size() ; i++){
 			Word w = allWords.get( i ) ;
+			desc.add( 0 ) ;
 			if( dialog.containsKey( w ) ) desc.set( i , dialog.get( w ) ) ; 
 		}
 		return desc ;

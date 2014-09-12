@@ -51,7 +51,7 @@ public class MetricsEngine {
 					}
 				}
 				lstDialogs.add( ctWords ) ;
-				Utils.debug( line ) ;
+//				Utils.debug( line ) ;
 			}
 			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
@@ -59,6 +59,13 @@ public class MetricsEngine {
 		List<List<Integer>> bagOfWords = new ArrayList<>() ;
 		bow.setOfWords( allWords ) ;
 		for( HashMap<Word,Integer> dialog : lstDialogs ) bagOfWords.add( bow.build( dialog ) ) ;
+		for( List<Integer> bag : bagOfWords ){
+			for( int i = 0 ; i < bag.size() ; i++){
+				if( i > 0 ) System.out.print( " " ) ;
+				System.out.print( bag.get( i ) ) ;
+			}
+			System.out.println() ;
+		}
 	}
 	
 	public HashMap<Word,Integer> analyze( String text ){
@@ -67,37 +74,5 @@ public class MetricsEngine {
 		ctxt.analyze( freeling ) ;
 		bow.analyze( ans ,  ctxt ) ;
 		return ans ;
-	}
-	
-	public void process( String in , String out ){
-//		File folder = new File( in ) ;
-//		String ansDir = out ;
-//		File [] files = folder.listFiles() ;
-//		int ans = 0 ;
-//		for( File f : files ){
-//			if( f.isFile() ){
-//				if( f.getName().startsWith( "Texto" ) && f.getName().endsWith( "txt" ) ){
-//					System.out.println( f.getName() ) ;
-//					ans++ ;
-//					File ansFile = new File( ansDir + "Metrics_" + f.getName() ) ;
-//					try{
-//						if( ansFile.exists() ){}
-//						else ansFile.createNewFile() ;
-//						String text = new String( Files.readAllBytes( Paths.get( f.getPath() ) ) ) ;
-//						Map<String,Double> acum = analyze( text ) ;
-//						FileWriter fw = new FileWriter( ansFile ) ;
-//						BufferedWriter bfw = new BufferedWriter( fw ) ;
-//						for( Entry<String,Double> entry : acum.entrySet() ){
-//							bfw.write( entry.getKey() +  " " + entry.getValue()  + "\n" ) ;
-//						}
-//						bfw.close() ;
-//						fw.close() ;
-//					}catch( Exception e ){
-//						e.printStackTrace() ;
-//					}
-//				}
-//			}
-//		}
-//		System.out.println( ans ) ;
 	}
 }
