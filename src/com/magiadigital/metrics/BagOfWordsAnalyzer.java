@@ -54,6 +54,8 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 		if( hasTag( w , "R" ) ) return false ;
 		if( hasTag( w , "CC" ) ) return false ;
 		return true ;
+//		if( hasTag( w , "F" ) ) return true ;
+//		return false ;
 	}
 	
 	public void setOfWords( List<String> setOfWords ){
@@ -68,7 +70,6 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 			desc.add( 0 ) ;
 			if( dialog.containsKey( w ) ) desc.set( i , dialog.get( w ) ) ; 
 		}
-		System.out.println( "ESTUVE AQUI 1, size = " + desc.size() ) ;
 		return desc ;
 	}
 	
