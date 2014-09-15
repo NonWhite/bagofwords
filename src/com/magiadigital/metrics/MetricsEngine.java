@@ -14,8 +14,6 @@ import com.magiadigital.utils.IFreelingAnalyzer;
 import com.magiadigital.utils.ImplFreelingAnalyzer;
 import com.magiadigital.utils.Utils;
 
-import edu.upc.freeling.Word ;
-
 public class MetricsEngine {
 	private static MetricsEngine instance = new MetricsEngine() ;
 	
@@ -52,8 +50,10 @@ public class MetricsEngine {
 				}
 				lstDialogs.add( ctWords ) ;
 			}
+			sc.close() ;
 			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
+		ddSc.close() ;
 		// Build bag of words
 		bow.setOfWords( allWords ) ;
 		for( HashMap<String,Integer> dialog : lstDialogs ) bow.buildAndSave( dialog ) ;
@@ -74,7 +74,7 @@ public class MetricsEngine {
 		return ans ;
 	}
 	
-	public void saveBoWData( String path ){
+	public void saveBoWData( String path ) throws FileNotFoundException{
 		File file = new File( path ) ;
 		PrintWriter pw = new PrintWriter( file ) ;
 		List<String> lstWords = bow.getSetOfWords() ;

@@ -48,7 +48,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	}
 	
 	public void setOfWords( List<String> setOfWords ){
-		bowVectors.clear() ;
+		bowVectors = new ArrayList<List<Integer>>() ;
 		for(int i = 0 ; i < setOfWords.size() ; i++) Utils.debug( i + ": " + setOfWords.get( i ) ) ;
 		this.allWords = setOfWords ;
 	}

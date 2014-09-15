@@ -11,9 +11,9 @@ public class Utils {
 	public static void printCommaSeparated( PrintWriter pw , List<?> lst ){
 		Integer n = lst.size() ;
 		for(int i = 0 ; i < n ; i++){
-			if( i > 0 ) System.out.println( "," ) ;
-			System.out.println( lst.get( i ) ) ;
+			if( i > 0 ) pw.print( "," ) ;
+			pw.print( lst.get( i ) ) ;
 		}
-		System.out.println() ;
+		pw.println() ;
 	}
 }
