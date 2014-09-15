@@ -34,7 +34,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 				for( Word w : sIt ){
 					if( isStopWord( w ) ) continue ;
 					Integer cont = 0 ;
-					String cad = w.getLemma() ;
+					String cad = w.getLemma().toLowerCase() ;
 					if( toFill.containsKey( cad ) ) cont = toFill.get( cad ) ;
 					toFill.put( cad , cont + 1 ) ;
 				}

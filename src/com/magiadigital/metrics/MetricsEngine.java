@@ -37,7 +37,7 @@ public class MetricsEngine {
 		// Process all dialogs
 		while( ddSc.hasNextLine() ){
 			Scanner sc = new Scanner( new File( ddSc.nextLine() ) ) ;
-			Utils.debug( "/* ======== INI DIALOGO ======= */" ) ;
+//			Utils.debug( "/* ======== INI DIALOGO ======= */" ) ;
 			while( sc.hasNextLine() ){
 				String line = sc.nextLine() ;
 				HashMap<String,Integer> ctWords = analyze( line ) ;
@@ -51,7 +51,7 @@ public class MetricsEngine {
 				lstDialogs.add( ctWords ) ;
 			}
 			sc.close() ;
-			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
+//			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
 		ddSc.close() ;
 		// Build bag of words
