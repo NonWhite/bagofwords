@@ -2,6 +2,7 @@ package com.magiadigital.metrics ;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,21 +51,19 @@ public class MetricsEngine {
 					}
 				}
 				lstDialogs.add( ctWords ) ;
-//				Utils.debug( line ) ;
 			}
 			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
 		// Build bag of words
-		List<List<Integer>> bagOfWords = new ArrayList<>() ;
 		bow.setOfWords( allWords ) ;
-		for( HashMap<String,Integer> dialog : lstDialogs ) bagOfWords.add( bow.build( dialog ) ) ;
-		for( List<Integer> bag : bagOfWords ){
-			for( int i = 0 ; i < bag.size() ; i++){
-				if( i > 0 ) System.out.print( " " ) ;
-				System.out.print( bag.get( i ) ) ;
-			}
-			System.out.println() ;
-		}
+		for( HashMap<String,Integer> dialog : lstDialogs ) bow.buildAndSave( dialog ) ;
+//		for( List<Integer> bag : bagOfWords ){
+//			for( int i = 0 ; i < bag.size() ; i++){
+//				if( i > 0 ) System.out.print( " " ) ;
+//				System.out.print( bag.get( i ) ) ;
+//			}
+//			System.out.println() ;
+//		}
 	}
 	
 	public HashMap<String,Integer> analyze( String text ){
@@ -73,5 +72,14 @@ public class MetricsEngine {
 		ctxt.analyze( freeling ) ;
 		bow.analyze( ans ,  ctxt ) ;
 		return ans ;
+	}
+	
+	public void saveBoWData( String path ){
+		File file = new File( path ) ;
+		PrintWriter pw = new PrintWriter( file ) ;
+		List<String> lstWords = bow.getSetOfWords() ;
+		List<List<Integer>> bowVectors = bow.getBowVectors() ;
+		Utils.printCommaSeparated( pw ,  lstWords ) ;
+		for( List<Integer> lst : bowVectors ) Utils.printCommaSeparated( pw ,  lst ) ;
 	}
 }

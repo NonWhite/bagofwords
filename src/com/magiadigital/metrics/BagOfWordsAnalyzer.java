@@ -13,22 +13,10 @@ import edu.upc.freeling.Sentence;
 import edu.upc.freeling.Word;
 
 public class BagOfWordsAnalyzer implements ICohAnalyzer{
-	static String NOUN_INCIDENCE = "WRDNOUN" ;
-	static String VERB_INCIDENCE = "WRDVERB" ;
-	static String ADJECTIVE_INCIDENCE = "WRDADJ" ;
-	static String ADVERB_INCIDENCE = "WRDADV" ;
-	static String PRONOUN_INCIDENCE = "WRDPRO" ;
-	static String FIRST_PERSON_SINGULAR_PRONOUN_INCIDENCE = "WRDPRP1s" ;
-	static String FIRST_PERSON_PLURAL_PRONOUN_INCIDENCE = "WRDPRP1p" ;
-	static String SECOND_PERSON_PRONOUN_INCIDENCE = "WRDPRP2" ;
-	static String THIRD_PERSON_SINGULAR_PRONOUN_INCIDENCE = "WRDPRP3s" ;
-	static String THRID_PERSON_PLURAL_PRONOUN_INCIDENCE = "WRDPRP3p" ;
-
-	static double INCIDENCE = 1000. ;
-	
-	static BagOfWordsAnalyzer instance;
+	private static BagOfWordsAnalyzer instance ;
 
 	private List<String> allWords ;
+	private List<List<Integer>> bowVectors ;
 	
 	public static BagOfWordsAnalyzer getInstance(){
 		if( instance == null ) return instance = new BagOfWordsAnalyzer() ;
@@ -60,6 +48,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	}
 	
 	public void setOfWords( List<String> setOfWords ){
+		bowVectors.clear() ;
 		for(int i = 0 ; i < setOfWords.size() ; i++) Utils.debug( i + ": " + setOfWords.get( i ) ) ;
 		this.allWords = setOfWords ;
 	}
@@ -74,6 +63,11 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 		return desc ;
 	}
 	
+	public void buildAndSave( HashMap<String,Integer> dialog ){
+		List<Integer> desc = build( dialog ) ;
+		bowVectors.add( desc ) ;
+	}
+	
 	public double countWordsByTag( CohParagraph p , String tag ){
 		double ans = 0.0 ;
 		for( Sentence s : p ){
@@ -85,5 +79,13 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	
 	private boolean hasTag( Word w , String regex ){
 		return w.getTag().matches( regex + ".*" ) ;
+	}
+	
+	public List<String> getSetOfWords(){
+		return allWords ;
+	}
+	
+	public List<List<Integer>> getBowVectors(){
+		return bowVectors ;
 	}
 }
