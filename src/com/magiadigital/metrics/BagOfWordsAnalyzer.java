@@ -45,8 +45,15 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	}
 	
 	public boolean isStopWord( Word w ){
-		if( hasTag( w , "F" ) ) return true ; // TODO
-		return false ;
+		if( hasTag( w , "AQ" ) ) return false ;
+		if( hasTag( w , "DT" ) ) return false ;
+		if( hasTag( w , "DE" ) ) return false ;
+		if( hasTag( w , "DI" ) ) return false ;
+		if( hasTag( w , "NC" ) ) return false ;
+		if( hasTag( w , "V" ) ) return false ;
+		if( hasTag( w , "R" ) ) return false ;
+		if( hasTag( w , "CC" ) ) return false ;
+		return true ;
 	}
 	
 	public void setOfWords( List<String> setOfWords ){
