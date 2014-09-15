@@ -10,3 +10,7 @@ dialogs/d_09.txt
 dialogs/d_10.txt
 dialogs/d_11.txt
 dialogs/d_12.txt
+dialogs/d_13.txt
+dialogs/d_14.txt
+dialogs/d_15.txt
+dialogs/d_16.txt
