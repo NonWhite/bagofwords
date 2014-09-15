@@ -57,13 +57,6 @@ public class MetricsEngine {
 		// Build bag of words
 		bow.setOfWords( allWords ) ;
 		for( HashMap<String,Integer> dialog : lstDialogs ) bow.buildAndSave( dialog ) ;
-//		for( List<Integer> bag : bagOfWords ){
-//			for( int i = 0 ; i < bag.size() ; i++){
-//				if( i > 0 ) System.out.print( " " ) ;
-//				System.out.print( bag.get( i ) ) ;
-//			}
-//			System.out.println() ;
-//		}
 	}
 	
 	public HashMap<String,Integer> analyze( String text ){
@@ -79,6 +72,7 @@ public class MetricsEngine {
 		PrintWriter pw = new PrintWriter( file ) ;
 		List<String> lstWords = bow.getSetOfWords() ;
 		List<List<Integer>> bowVectors = bow.getBowVectors() ;
+		System.out.println( bowVectors.size() ) ;
 		Utils.printCommaSeparated( pw ,  lstWords ) ;
 		for( List<Integer> lst : bowVectors ) Utils.printCommaSeparated( pw ,  lst ) ;
 	}
