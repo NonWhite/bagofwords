@@ -23,7 +23,9 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 		return instance ;
 	}
 	
-	private BagOfWordsAnalyzer() {}
+	private BagOfWordsAnalyzer(){
+		bowVectors = new ArrayList<List<Integer>>() ;
+	}
 
 	@Override
 	public void analyze( HashMap<String,Integer> toFill, CohText text ){
@@ -48,7 +50,6 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	}
 	
 	public void setOfWords( List<String> setOfWords ){
-		bowVectors = new ArrayList<List<Integer>>() ;
 		for(int i = 0 ; i < setOfWords.size() ; i++) Utils.debug( i + ": " + setOfWords.get( i ) ) ;
 		this.allWords = setOfWords ;
 	}
@@ -60,6 +61,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 			desc.add( 0 ) ;
 			if( dialog.containsKey( w ) ) desc.set( i , dialog.get( w ) ) ; 
 		}
+		System.out.println( "ESTUVE AQUI 1, size = " + desc.size() ) ;
 		return desc ;
 	}
 	

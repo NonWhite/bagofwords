@@ -79,5 +79,6 @@ public class MetricsEngine {
 		System.out.println( bowVectors.size() ) ;
 		Utils.printCommaSeparated( pw ,  lstWords ) ;
 		for( List<Integer> lst : bowVectors ) Utils.printCommaSeparated( pw ,  lst ) ;
+		pw.close() ;
 	}
 }
