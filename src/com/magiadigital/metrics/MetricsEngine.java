@@ -38,6 +38,7 @@ public class MetricsEngine {
 		while( ddSc.hasNextLine() ){
 			Scanner sc = new Scanner( new File( ddSc.nextLine() ) ) ;
 //			Utils.debug( "/* ======== INI DIALOGO ======= */" ) ;
+			HashMap<String,Integer> ctDialog = new HashMap<>() ;
 			while( sc.hasNextLine() ){
 				String line = sc.nextLine() ;
 				HashMap<String,Integer> ctWords = analyze( line ) ;
@@ -47,9 +48,12 @@ public class MetricsEngine {
 						mapWords.put( w , true ) ;
 						allWords.add( w ) ;
 					}
+					Integer cont = 0 ;
+					if( ctDialog.containsKey( w ) ) cont = ctDialog.get( w ) ;
+					ctDialog.put( w , cont + ctWords.get( w ) ) ;
 				}
-				lstDialogs.add( ctWords ) ;
 			}
+			lstDialogs.add( ctDialog ) ;
 			sc.close() ;
 //			Utils.debug( "/* ======== FIN DIALOGO ======= */" ) ;
 		}
