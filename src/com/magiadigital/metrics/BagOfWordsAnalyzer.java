@@ -43,7 +43,7 @@ public class BagOfWordsAnalyzer implements ICohAnalyzer{
 	}
 	
 	public boolean isStopWord( Word w ){
-		if( hasTag( w , "N" ) ) return false ; // TODO
+		if( hasTag( w , "F" ) ) return true ; // TODO
 		return false ;
 	}
 	
