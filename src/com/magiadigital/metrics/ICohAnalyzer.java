@@ -7,5 +7,5 @@ import com.magiadigital.structs.CohText;
 import edu.upc.freeling.Word;
 
 public interface ICohAnalyzer {
-	void analyze( HashMap<Word,Integer> toFill, CohText text);
+	void analyze( HashMap<String,Integer> toFill, CohText text);
 }

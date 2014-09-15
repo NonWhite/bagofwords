@@ -19,7 +19,7 @@ public class MetricsEngine {
 	private static MetricsEngine instance = new MetricsEngine() ;
 	
 	private HashMap<String,Boolean> mapWords ;
-	private List<Word> allWords ;
+	private List<String> allWords ;
 	private IFreelingAnalyzer freeling = ImplFreelingAnalyzer.getInstance() ;
 	private BagOfWordsAnalyzer bow = BagOfWordsAnalyzer.getInstance() ;
 	
@@ -34,19 +34,18 @@ public class MetricsEngine {
 		mapWords = new HashMap<>() ;
 		allWords = new ArrayList<>() ;
 		Scanner ddSc = new Scanner( new File( path ) ) ;
-		List<HashMap<Word,Integer>> lstDialogs = new ArrayList<>() ;
+		List<HashMap<String,Integer>> lstDialogs = new ArrayList<>() ;
 		// Process all dialogs
 		while( ddSc.hasNextLine() ){
 			Scanner sc = new Scanner( new File( ddSc.nextLine() ) ) ;
 			Utils.debug( "/* ======== INI DIALOGO ======= */" ) ;
 			while( sc.hasNextLine() ){
 				String line = sc.nextLine() ;
-				HashMap<Word,Integer> ctWords = analyze( line ) ;
-				Set<Word> keys = ctWords.keySet() ;
-				for( Word w : keys ){
-					String lem = w.getLemma() ;
-					if( !mapWords.containsKey( lem ) ){
-						mapWords.put( lem , true ) ;
+				HashMap<String,Integer> ctWords = analyze( line ) ;
+				Set<String> keys = ctWords.keySet() ;
+				for( String w : keys ){
+					if( !mapWords.containsKey( w ) ){
+						mapWords.put( w , true ) ;
 						allWords.add( w ) ;
 					}
 				}
@@ -58,7 +57,7 @@ public class MetricsEngine {
 		// Build bag of words
 		List<List<Integer>> bagOfWords = new ArrayList<>() ;
 		bow.setOfWords( allWords ) ;
-		for( HashMap<Word,Integer> dialog : lstDialogs ) bagOfWords.add( bow.build( dialog ) ) ;
+		for( HashMap<String,Integer> dialog : lstDialogs ) bagOfWords.add( bow.build( dialog ) ) ;
 		for( List<Integer> bag : bagOfWords ){
 			for( int i = 0 ; i < bag.size() ; i++){
 				if( i > 0 ) System.out.print( " " ) ;
@@ -68,8 +67,8 @@ public class MetricsEngine {
 		}
 	}
 	
-	public HashMap<Word,Integer> analyze( String text ){
-		HashMap<Word,Integer> ans = new HashMap<>() ;
+	public HashMap<String,Integer> analyze( String text ){
+		HashMap<String,Integer> ans = new HashMap<>() ;
 		CohText ctxt = new CohText( text ) ;
 		ctxt.analyze( freeling ) ;
 		bow.analyze( ans ,  ctxt ) ;
